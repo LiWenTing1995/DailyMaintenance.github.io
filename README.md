@@ -6,3 +6,16 @@ usage:
     for i in {1..10};do step1; step 2; step 3; done
 sample:
     for i in ./*; do echo $i; echo `basename $i`; done
+    
+### case 2：crontab任务计划
+```
+usage:
+    -l：查看计划清单
+    -e：编辑计划清单
+    -d：删除计划清单
+example:
+    * 1/* * * * cp file1 file2
+```
+|分  |时  |日  |月  |周 |命令   |
+|-|
+|0-60|0-24|1-31|1-12|1-7|command|
