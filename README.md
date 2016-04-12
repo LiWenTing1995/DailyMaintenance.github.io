@@ -30,3 +30,17 @@ example:
     echo ${dir##*/} 获取文件路径，等同于dirname $dir
     echo ${dir%/*}  获取文件名，等同于basename $dir
 ```
+
+### case 4：递归打印子目录下的所有文件名
+```
+function readdir(){
+    for file in `ls $1`
+    do
+        if [ -d $1"/"$file ];then
+            readdir $1"/"$file    
+        else
+            echo $1"/"$file
+        fi
+        done
+}
+```
