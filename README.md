@@ -44,3 +44,5 @@ function readdir(){
         done
 }
 ```
+
+readdir .
