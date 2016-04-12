@@ -43,6 +43,5 @@ function readdir(){
         fi
         done
 }
-```
-
 readdir .
+```
