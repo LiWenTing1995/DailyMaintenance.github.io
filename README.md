@@ -45,3 +45,9 @@ function readdir(){
 }
 readdir .
 ```
+### case 5：ubuntu 添加仓库和秘钥
+```bash
+usage:
+    1.apt-key adv --server xx.net --recv-keys yy
+    2.echo "deb http://llvm.org/apt/jessie/ llvm-toolchain-jessie-3.8 main" > /etc/apt/sources.list.d/llvm.list
+```    
