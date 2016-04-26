@@ -51,3 +51,14 @@ usage:
     1.apt-key adv --server xx.net --recv-keys yy
     2.echo "deb http://llvm.org/apt/jessie/ llvm-toolchain-jessie-3.8 main" > /etc/apt/sources.list.d/llvm.list
 ```    
+
+### case 6：shell 重定向
+```bash
+usage:
+    1.文件重定向：
+    commnad > stdout.log ; 标准输出重定向
+    command 2> err.log ; 标准错误重定向
+    command &> all.log ; 输出和错误都重定向
+    2.文件描述符重定向: 
+    command >all.log 2>&1 ; 标准输出重定向到all.log，然后标准错误重定向到标准输出，等于输出和错误都重定向到all.log，常用 command > /dev/null 2>&1屏蔽信息。
+```   
