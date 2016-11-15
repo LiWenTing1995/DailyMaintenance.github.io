@@ -61,4 +61,8 @@ usage:
     command &> all.log ; 输出和错误都重定向
     2.文件描述符重定向: 
     command >all.log 2>&1 ; 标准输出重定向到all.log，然后标准错误重定向到标准输出，等于输出和错误都重定向到all.log，常用 command > /dev/null 2>&1屏蔽信息。
+    3.管道
+    管道是其前者的输出作为后者的输入，只有当后者会阻塞在等候输入的情况下有效，检测方法是直接后者的命令看是否阻塞？
+    echo “hello” | cat  有效，因为cat是输入阻塞型
+    echo “hello” | ls   无效，因为ls不是输入阻塞型
 ```   
